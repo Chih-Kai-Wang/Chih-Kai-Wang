@@ -63,13 +63,14 @@
 - [EmiyaKatuz/Codex-Dream-Skin-Needy-Girl-Overdose#10](https://github.com/EmiyaKatuz/Codex-Dream-Skin-Needy-Girl-Overdose/pull/10) — 讓 Windows 驗證失敗可區分：縮小原生視窗的降級判斷，修正獨立執行時的輔助模組載入。 <sub>2026-07-28</sub> · [案例](case-studies/windows-contribution.md)
 
 <details>
-<summary><b>其他作品</b> — 還有 10 筆記錄</summary>
+<summary><b>其他作品</b> — 還有 11 筆記錄</summary>
 
 **工具**
 
 - [Verified Search](https://github.com/f0909172434/dsh-plugin-verified-search) — DeepSeek Harness 檢索外掛：保留引用片段，讓證據缺口可見。只有 verified_search 是穩定版，四個擴充工具仍屬實驗。250 個測試；尚無獨立驗證。 *v0.1.1 · stable search / experimental extensions*
 - [Second Agent Kit](https://github.com/f0909172434/dsh-second-agent-kit) — DeepSeek Harness 的 macOS 修補：shell 程序的 Seatbelt 限制、輸入呼叫上限、以專案為單位的記憶隔離。缺口都有記錄；它不是萬用防火牆。 *v0.1.4 · macOS only · experimental parts*
 - [DSH Architecture Lab](https://github.com/f0909172434/dsh-architecture-lab) — 開發預覽：在 DeepSeek Harness 上跑隔離的記憶／規劃實驗（Lima VM 或 Seatbelt），附外部評判與費用計量。目前的結果只來自一個小型修復任務。85 個測試。 *v0.1.0-dev.9 · development preview*
+- [agentconf-audit](https://github.com/f0909172434/agentconf-audit) — 對 AI coding agent 設定檔（Claude Code、Claude Desktop、MCP 伺服器、Codex）的靜態安全稽核，報告附上證據且可重播。21 條規則，每條都寫明理由與盲點；證據經遮蔽並附可驗證的 report_sha256；10 個合成 fixture 與凍結的黃金報告；72 個測試；CI 跑 Ubuntu 與 macOS × Python 3.11/3.13；零執行期依賴。尚無獨立驗證；不讀取 hook 腳本，也不連接 MCP 伺服器。 *v0.1.0 · static analysis only*
 
 **研究**
 
