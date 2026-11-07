@@ -2,31 +2,31 @@
 
 [Repository](https://github.com/f0909172434/rigorgraph) · [PyPI 1.0.1](https://pypi.org/project/rigorgraph/1.0.1/)
 
-RigorGraph is a Python CLI for version-controlled claim and evidence records. It performs deterministic audits and generates self-contained offline HTML reports. The released package is a public beta.
+RigorGraph is a Python command-line tool that stores claims and their evidence as records under version control. Its audits give the same result for the same records, and it writes self-contained HTML reports that open without a network connection. The released package is a public beta.
 
 ## Problem and observable result
 
-A review can become outdated when the claim or supporting file changes. Keeping only a “verified” label hides that dependency.
+A review goes out of date when the claim or a supporting file changes after it. A bare "verified" label hides the fact that the review depended on those exact contents.
 
-RigorGraph records claims, evidence hashes, and review snapshots. Its tests demonstrate that changed evidence bytes produce `RG_HASH_MISMATCH`, while a changed claim invalidates the old acceptance snapshot with `RG_SNAPSHOT_MISMATCH`. The audit also checks dependency cycles, missing evidence requirements, unchecked evidence, and invalid transitions.
+RigorGraph records each claim, the hashes of its evidence and a snapshot of each review. Its tests show that changing a byte of evidence produces `RG_HASH_MISMATCH`, and that changing the claim invalidates the earlier acceptance snapshot with `RG_SNAPSHOT_MISMATCH`. The audit also checks for dependency cycles, missing evidence requirements, evidence that was never checked and invalid status transitions.
 
 ## Engineering decisions
 
-- **Store records as version-controlled data.** JSON records and schemas make changes reviewable in the same workflow as source code.
-- **Separate evidence identity from judgment.** A matching hash establishes byte identity. Review records carry scoped acceptance or rejection; a hash does not establish scientific validity.
-- **Generate a portable report.** The offline HTML viewer travels with the result and does not require a running backend. This adds a generated artifact that must be kept reproducible.
-- **Keep failure outcomes visible.** Missing evidence or invalid review state produces an audit finding rather than silently preserving an old status.
+- **Store records as version-controlled data.** Records and schemas are JSON files, so changes to them are reviewed in the same workflow as source code.
+- **Keep evidence identity apart from judgment.** A matching hash shows that a file is byte-for-byte the same. Acceptance or rejection, with its scope, lives in the review record, and a hash says nothing about scientific validity.
+- **Generate a portable report.** The offline HTML viewer travels with the result and needs no running backend. The cost is one more generated artifact that has to stay reproducible.
+- **Keep failures visible.** Missing evidence or an invalid review state produces an audit finding. The tool never keeps an old status quietly in place.
 
 ## Verification and maintenance
 
-On September 5, 2026, the local maintenance checks passed 64 tests, lint, schema validation, and the full release check, including frontend and plugin builds. The dependency update in [PR #19](https://github.com/f0909172434/rigorgraph/pull/19) required rebuilding the offline viewer from its frontend source. The generated file was not edited by hand; the updated PR passed the required checks and was merged.
+On September 5, 2026, the local maintenance checks passed 64 tests, lint, schema validation and the full release check, which includes the frontend and plugin builds. The dependency update in [PR #19](https://github.com/f0909172434/rigorgraph/pull/19) required rebuilding the offline viewer from its frontend source. Nobody edited the generated file by hand. The updated PR passed the required checks and was merged.
 
 Source pointers: [audit tests](https://github.com/f0909172434/rigorgraph/blob/main/tests/test_audit.py), [frontend](https://github.com/f0909172434/rigorgraph/tree/main/frontend), [Python implementation](https://github.com/f0909172434/rigorgraph/tree/main/src/rigorgraph).
 
 ## Inspect the exported reports
 
-The [valid math report](https://f0909172434.github.io/examples/rigorgraph/math.html) and [invalid promotion report](https://f0909172434.github.io/examples/rigorgraph/invalid.html) are actual self-contained exports of built-in demo fixtures. Their audits returned PASS/exit 0 and FAIL/exit 1 respectively. The invalid fixture reports `RG_EVIDENCE_TYPE_MISSING` and `RG_ACCEPT_EVIDENCE_UNCHECKED`. The [walkthrough](https://github.com/f0909172434/rigorgraph/blob/main/docs/REPORT_WALKTHROUGH.md) includes reproduction commands and snapshot hashes. Demo review records are synthetic, not new independent research reviews.
+The [valid math report](https://f0909172434.github.io/examples/rigorgraph/math.html) and the [invalid promotion report](https://f0909172434.github.io/examples/rigorgraph/invalid.html) are real self-contained exports of the built-in demo fixtures. The first audit returned PASS with exit code 0, and the second returned FAIL with exit code 1. The invalid fixture reports `RG_EVIDENCE_TYPE_MISSING` and `RG_ACCEPT_EVIDENCE_UNCHECKED`. The [walkthrough](https://github.com/f0909172434/rigorgraph/blob/main/docs/REPORT_WALKTHROUGH.md) gives the commands to reproduce both reports and their snapshot hashes. The demo review records are synthetic and are not new independent reviews of research.
 
 ## Limits
 
-The audit verifies workflow and record integrity. It does not decide whether a scientific conclusion is true. A first-user trial should check whether someone can follow a claim to its evidence and correctly explain why the invalid promotion failed.
+The audit checks the workflow and the integrity of the records. It does not decide whether a scientific conclusion is true. A first-user trial should test whether someone can follow a claim to its evidence and explain correctly why the invalid promotion failed.
