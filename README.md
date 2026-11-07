@@ -63,13 +63,14 @@ This site and the GitHub profile README are generated from one catalog file; the
 - [EmiyaKatuz/Codex-Dream-Skin-Needy-Girl-Overdose#10](https://github.com/EmiyaKatuz/Codex-Dream-Skin-Needy-Girl-Overdose/pull/10) — Keep Windows verification failures distinguishable: narrower native-window fallback, standalone helper loading. <sub>2026-07-28</sub> · [case study](case-studies/windows-contribution.md)
 
 <details>
-<summary><b>Everything else</b> — 10 more records</summary>
+<summary><b>Everything else</b> — 11 more records</summary>
 
 **Tools**
 
 - [Verified Search](https://github.com/f0909172434/dsh-plugin-verified-search) — DeepSeek Harness search plugin that retains citation excerpts and keeps evidence gaps visible. Only verified_search is stable; four extensions are experimental. 250 tests; no independent validation. *v0.1.1 · stable search / experimental extensions*
 - [Second Agent Kit](https://github.com/f0909172434/dsh-second-agent-kit) — Patches for DeepSeek Harness on macOS: Seatbelt confinement for shell processes, input-call limits, and per-project memory isolation. Gaps are documented; it is not a universal firewall. *v0.1.4 · macOS only · experimental parts*
 - [DSH Architecture Lab](https://github.com/f0909172434/dsh-architecture-lab) — Development-preview toolkit for isolated memory/planning experiments on DeepSeek Harness (Lima VM or Seatbelt), with external judging and cost metering. Results so far come from one small repair task. 85 tests. *v0.1.0-dev.9 · development preview*
+- [agentconf-audit](https://github.com/f0909172434/agentconf-audit) — Static security audit of AI coding-agent configuration (Claude Code, Claude Desktop, MCP servers, Codex) with evidence-attached, replayable reports. 21 rules, each with a rationale and a stated blind spot; redacted evidence and a verifiable report_sha256; 10 synthetic fixtures with frozen golden reports; 72 tests; CI on Ubuntu and macOS × Python 3.11/3.13; zero runtime dependencies. No independent validation; does not read hook scripts or connect to MCP servers. *v0.1.0 · static analysis only*
 
 **Research**
 
