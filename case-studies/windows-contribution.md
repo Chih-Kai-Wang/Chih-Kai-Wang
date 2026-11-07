@@ -2,10 +2,10 @@
 
 [Merged PR #10](https://github.com/EmiyaKatuz/Codex-Dream-Skin-Needy-Girl-Overdose/pull/10)
 
-This contribution to Codex Dream Skin was merged on July 28, 2026. It narrowed the native-window fallback classification on Windows and repaired helper loading when verification was run standalone.
+This contribution to Codex Dream Skin was merged on July 28, 2026. It narrowed the cases on Windows that count as a native-window fallback, and it fixed helper loading when verification runs on its own.
 
-The important decision was the scope of error handling: an expected native-window limitation could use a fallback, while unrelated errors still had to remain failures. An overly broad fallback would make the verification result less useful by treating distinct failures as the same condition.
+The key decision was how far the error handling should reach. A known native-window limitation may use the fallback, but every unrelated error must still fail. A fallback that caught too much would make the verification result less useful, because different failures would look like the same condition.
 
-The merged PR provides public evidence of an accepted change to an external project. The September portfolio review checked the PR's diff and merge state; it did not rerun that project's Windows environment. Its validation record should be read in the PR itself.
+The merged PR is public evidence that an external project accepted the change. The September portfolio review checked the PR's diff and merge state, but it did not rerun the project's Windows environment. The PR itself holds the validation record.
 
-See also the two later merged upstream fixes listed on the profile: DeepSeek Harness Desktop #740 (2026-09-26) and dsh-engram #4 (2026-09-21).
+The profile also lists two later upstream fixes that were merged: DeepSeek Harness Desktop #740 on 2026-09-26 and dsh-engram #4 on 2026-09-21.
