@@ -1,6 +1,6 @@
 # ProofWeave: certify a formal target without overstating its meaning
 
-[Repository](https://github.com/f0909172434/proofweave-math-lab) · [Actual run and artifacts](https://github.com/f0909172434/proofweave-math-lab/tree/main/docs/walkthroughs/simple-ring)
+[Repository](https://github.com/Chih-Kai-Wang/proofweave-math-lab) · [Actual run and artifacts](https://github.com/Chih-Kai-Wang/proofweave-math-lab/tree/main/docs/walkthroughs/simple-ring)
 
 ProofWeave Core is experimental Python infrastructure for structured
 mathematical claims. It writes Lean certification artifacts that a reader can

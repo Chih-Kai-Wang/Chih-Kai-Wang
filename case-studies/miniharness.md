@@ -1,6 +1,6 @@
 # MiniHarness: turn a curriculum outline into executable lessons
 
-[Repository](https://github.com/f0909172434/miniharness) · [Course website](https://f0909172434.github.io/miniharness/) · [Assessment rubrics](https://github.com/f0909172434/miniharness/blob/main/academy/ASSESSMENT.md)
+[Repository](https://github.com/Chih-Kai-Wang/miniharness) · [Course website](https://chih-kai-wang.github.io/miniharness/) · [Assessment rubrics](https://github.com/Chih-Kai-Wang/miniharness/blob/main/academy/ASSESSMENT.md)
 
 MiniHarness combines three things: an agent harness written with only the Python
 standard library, an eight-step workshop and a curriculum that runs from

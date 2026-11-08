@@ -1,6 +1,6 @@
 # HonestCI: a green process can contain zero tests
 
-[Repository](https://github.com/f0909172434/honest-ci) · [Reproducible demo](https://github.com/f0909172434/honest-ci/blob/main/launch/DEMO.md) · [npm 1.0.4](https://www.npmjs.com/package/honest-ci/v/1.0.4)
+[Repository](https://github.com/Chih-Kai-Wang/honest-ci) · [Reproducible demo](https://github.com/Chih-Kai-Wang/honest-ci/blob/main/launch/DEMO.md) · [npm 1.0.4](https://www.npmjs.com/package/honest-ci/v/1.0.4)
 
 HonestCI is a TypeScript command-line tool and GitHub Action that checks the test evidence behind a successful run. It reads JUnit reports and flags missing files, stale results, zero tests and unexpected drops in the test count compared with a trusted baseline.
 
@@ -19,7 +19,7 @@ When the same runner is wrapped with HonestCI, the run reports `HCI004_ZERO_TEST
 
 ## Maintenance example: September 2026
 
-A dependency PR passed the execution checks but failed the package consistency check, because its generated bundles had not been updated. Rebuilding the Action and the CLI in the PR environment brought the package back in line with its source. The full verification command then passed 54 tests, type checks, documentation checks, seven demonstration scenarios and the package smoke checks. [PR #26](https://github.com/f0909172434/honest-ci/pull/26) passed its required checks after that and was merged.
+A dependency PR passed the execution checks but failed the package consistency check, because its generated bundles had not been updated. Rebuilding the Action and the CLI in the PR environment brought the package back in line with its source. The full verification command then passed 54 tests, type checks, documentation checks, seven demonstration scenarios and the package smoke checks. [PR #26](https://github.com/Chih-Kai-Wang/honest-ci/pull/26) passed its required checks after that and was merged.
 
 In a separate incident, an earlier macOS / Node 24 build failed with a segmentation fault. Rerunning the failed jobs at the same commit succeeded. This shows that the check recovered, but it does not identify the root cause.
 

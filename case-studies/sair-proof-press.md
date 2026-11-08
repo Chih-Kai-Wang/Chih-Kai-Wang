@@ -1,6 +1,6 @@
 # SAIR Proof Press: retain a checkable answer through bounded search
 
-[Public repository](https://github.com/f0909172434/sair-stage2-proof-press) · [Interactive site](https://f0909172434.github.io/sair-stage2-proof-press/) · [English paper](https://f0909172434.github.io/sair-stage2-proof-press/paper/sair_stage2_solver_research.pdf)
+[Public repository](https://github.com/Chih-Kai-Wang/sair-stage2-proof-press) · [Interactive site](https://chih-kai-wang.github.io/sair-stage2-proof-press/) · [English paper](https://chih-kai-wang.github.io/sair-stage2-proof-press/paper/sair_stage2_solver_research.pdf)
 
 This public companion repository documents solvers for equational implication,
 which asks whether one magma identity implies another. A "true" answer must come
@@ -36,9 +36,9 @@ private set. On September 5, 2026, the byte sizes and SHA-256 hashes of the four
 public solver files were read back and matched the published manifest. That
 portfolio maintenance check did not rerun the full competition evaluation.
 
-Sources: [aggregate results](https://github.com/f0909172434/sair-stage2-proof-press/blob/main/docs/results.md),
-[machine-readable evidence](https://github.com/f0909172434/sair-stage2-proof-press/tree/main/docs/evidence),
-[frozen solver files](https://github.com/f0909172434/sair-stage2-proof-press/tree/main/dist/final).
+Sources: [aggregate results](https://github.com/Chih-Kai-Wang/sair-stage2-proof-press/blob/main/docs/results.md),
+[machine-readable evidence](https://github.com/Chih-Kai-Wang/sair-stage2-proof-press/tree/main/docs/evidence),
+[frozen solver files](https://github.com/Chih-Kai-Wang/sair-stage2-proof-press/tree/main/dist/final).
 
 ## What this demonstrates
 
@@ -50,5 +50,5 @@ The records show coverage of the released inputs. They do not include a private
 score or rank published by the organizers. The portal's participation readback
 records that a submission was delivered, not that it scored well. The full
 private research history is not part of this public companion. The
-[claim boundaries](https://github.com/f0909172434/sair-stage2-proof-press/blob/main/docs/claim-boundaries.md)
+[claim boundaries](https://github.com/Chih-Kai-Wang/sair-stage2-proof-press/blob/main/docs/claim-boundaries.md)
 document lists what these records do and do not support.

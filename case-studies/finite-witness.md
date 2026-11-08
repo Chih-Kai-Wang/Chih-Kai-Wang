@@ -1,6 +1,6 @@
 # Finite Witness: make a counterexample inspectable
 
-[Live workbench](https://f0909172434.github.io/finite-witness-webmcp/) · [Source](https://github.com/f0909172434/finite-witness-webmcp) · [CV](../cv/CV.md)
+[Live workbench](https://chih-kai-wang.github.io/finite-witness-webmcp/) · [Source](https://github.com/Chih-Kai-Wang/finite-witness-webmcp) · [CV](../cv/CV.md)
 
 Finite Witness is a browser workbench for testing conjectures about finite graphs. When a claim fails, it returns the graph that breaks it and the properties that show why that graph is a counterexample. A person using the page and an agent using WebMCP drive the same application.
 
@@ -23,7 +23,7 @@ A single counterexample is enough to disprove a universal claim. The reverse doe
 
 The repository's nine tests cover graph properties, known counterexamples, bounded claim formatting, round-trips of shareable experiments, repair behavior, handling of damaged evidence and deterministic certificates. The suite passed locally on September 5, 2026. Earlier in the same review, a live browser check confirmed that the visible result, the WebMCP search response and the certificate agreed with each other.
 
-Source pointers: [graph engine](https://github.com/f0909172434/finite-witness-webmcp/blob/main/src/graph-engine.js), [worker](https://github.com/f0909172434/finite-witness-webmcp/blob/main/src/search-worker.js), [WebMCP adapter](https://github.com/f0909172434/finite-witness-webmcp/blob/main/src/webmcp.js), [tests](https://github.com/f0909172434/finite-witness-webmcp/tree/main/tests).
+Source pointers: [graph engine](https://github.com/Chih-Kai-Wang/finite-witness-webmcp/blob/main/src/graph-engine.js), [worker](https://github.com/Chih-Kai-Wang/finite-witness-webmcp/blob/main/src/search-worker.js), [WebMCP adapter](https://github.com/Chih-Kai-Wang/finite-witness-webmcp/blob/main/src/webmcp.js), [tests](https://github.com/Chih-Kai-Wang/finite-witness-webmcp/tree/main/tests).
 
 ## Next useful experiment
 
